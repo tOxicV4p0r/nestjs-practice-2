@@ -22,6 +22,7 @@ npx prisma init
 
 - create db model in schema.prisma file
 - migrate
+- show help #prisma migrate --help
 npx prisma migrate dev
 npx prisma studio
 
@@ -55,3 +56,18 @@ npm i argon2
 -signin
 
 -add script restart DB (up remove)
+db:dev:up -> up
+db:dev:rm -> delete database
+prisma:dev:deploy -> migrate
+db:dev:restart -> delete -> up -> wait -> migrate
+
+-install config package for read env file
+npm i @nestjs/config
+
+-if there is dependecy ex.
+    constructor(...inject class module)
+    must have @Injectable decorator
+
+-inject nestjs config to prisma service then get database_url
+-add isGlobal as an option to CongigModule
+ConfigModule.forRoot({isGlobal: true,}),

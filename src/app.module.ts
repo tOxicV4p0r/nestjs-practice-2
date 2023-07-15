@@ -4,9 +4,13 @@ import { BookmarkModule } from './bookmark/bookmark.module';
 import { TestModule } from './test/test.module';
 import { UserModule } from './user/user.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     AuthModule,
     BookmarkModule,
     TestModule,

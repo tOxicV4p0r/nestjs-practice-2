@@ -71,3 +71,10 @@ npm i @nestjs/config
 -inject nestjs config to prisma service then get database_url
 -add isGlobal as an option to CongigModule
 ConfigModule.forRoot({isGlobal: true,}),
+
+-authenication
+-install passport jwt
+npm i @nestjs/passport passport @nestjs/jwt passport-jwt
+npm i --save-dev @types/passport-jwt
+
+-signToken to signin

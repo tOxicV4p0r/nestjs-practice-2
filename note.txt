@@ -91,4 +91,36 @@ export class JwtGuard extends AuthGuard('jwt2')
 -replace AuthGuard
 @UseGuards(JwtGuard)
 
+-create custom decorator for auth
+get-user.decorator
+-use type User that generated from prisma client
+user: User
 
+-TESTING E2E
+-install PactumJs
+npm i pactum
+
+-watch no cache result
+--watch --no-cache
+
+-create test module
+-create db for test
+
+-install dotenv-cli for select the test DB
+npm i dotenv-cli
+
+"prisma:test:deploy": "dotenv -e .env.test -- prisma migrate deploy"
+"pretest:e2e":
+"test:e2e": "dotenv -e .env.test -- jest
+
+-because jest watch test, when delete data we have to arrange the sequence to avoid the conflict for the table relation
+-create function for delete data in PrismaService
+-running the sequence by using $transaction
+this.$transaction([
+    this.bookmark.deleteMany(),
+    this.user.deleteMany(),
+]);
+
+-run cleanDb in beforeAll() test function
+
+-create testcase TDD

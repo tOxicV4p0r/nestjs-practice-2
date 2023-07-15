@@ -1,5 +1,5 @@
 import { ForbiddenException, Injectable } from "@nestjs/common";
-import { PrismaService } from "src/prisma/prisma.service";
+import { PrismaService } from "../prisma/prisma.service";
 import { Prisma } from "prisma/prisma-client"
 import { JwtService } from "@nestjs/jwt/dist";
 import { ConfigService } from "@nestjs/config"

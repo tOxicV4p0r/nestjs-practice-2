@@ -11,9 +11,9 @@ export class AuthDto {
 
     @IsString()
     @IsOptional()
-    firstName: string
+    firstName?: string
 
     @IsString()
     @IsOptional()
-    lastName: string
+    lastName?: string
 }

@@ -81,3 +81,14 @@ npm i --save-dev @types/passport-jwt
 -add stategy to auth module
 -useGuard , pass the strategy name that provide in stategy - in this case "jwt"
 @UseGuards(AuthGuard('jwt'))
+-add validate function
+
+
+-if we have a stirng somewhere, it can create error
+AuthGuard('jwt2')
+-create custom Guard to replace the above
+export class JwtGuard extends AuthGuard('jwt2') 
+-replace AuthGuard
+@UseGuards(JwtGuard)
+
+

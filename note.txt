@@ -18,3 +18,40 @@ npm i prisma --save-dev #install prisma
 npm i @prisma/client #Prisma Client is an auto-generated and type-safe query builder
 npx prisma #show all prisma command
 npx prisma init 
+- config DB URL in .env
+
+- create db model in schema.prisma file
+- migrate
+npx prisma migrate dev
+npx prisma studio
+
+if alter db
+npx prisma migrate reset #deletes and recreates the database
+
+- generate Prisma Client
+npx prisma generate
+    The generate command is most often used to generate Prisma Client with the prisma-client-js generator. This does three things:
+    - Searches the current directory and parent directories to find the applicable npm project. It will create a package.json file in the current directory if it cannot find one.
+    - Installs the @prisma/client into the npm project if it is not already present.
+    - Inspects the current directory to find a Prisma schema file to process. It will then generate a customized Prisma Client for your project.
+
+-create PrismaService for connect DB
+-define prisma module as Global
+
+-create DTO (data transfer object)
+
+-install classs validator
+npm i --save class-validator class-transformer
+-add decorator to DTO
+
+-tell express to use Pipe
+app.useGlobalPipes(new ValidationPipe());
+{ whitelist: true } #strip out other field
+
+-install argon2
+npm i argon2
+
+-signup
+-signin
+
+-add script restart DB (up remove)

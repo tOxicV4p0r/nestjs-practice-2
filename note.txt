@@ -10,3 +10,11 @@ constructor(private var_name:var_type){}
 
 reponse type depend on type of value
 
+-create docker compose for postgres DB
+
+-install prisma for interface with postgresDB
+
+npm i prisma --save-dev #install prisma
+npm i @prisma/client #Prisma Client is an auto-generated and type-safe query builder
+npx prisma #show all prisma command
+npx prisma init 

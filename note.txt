@@ -1,0 +1,12 @@
+command
+net g [module|service|controller]
+
+var_name: var_type
+constructor(var:var_type){
+    this.var_name = var;
+}
+-shorthand
+constructor(private var_name:var_type){}
+
+reponse type depend on type of value
+

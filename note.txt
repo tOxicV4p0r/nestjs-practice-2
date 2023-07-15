@@ -78,3 +78,6 @@ npm i @nestjs/passport passport @nestjs/jwt passport-jwt
 npm i --save-dev @types/passport-jwt
 
 -signToken to signin
+-add stategy to auth module
+-useGuard , pass the strategy name that provide in stategy - in this case "jwt"
+@UseGuards(AuthGuard('jwt'))
